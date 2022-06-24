@@ -39,7 +39,7 @@ function normalizePort(val) {
 // })
 
   // if we are not on master thread then start the master thread
-    db.sequelize.sync({force:true}).then(function () {
+    db.sequelize.sync({force:false}).then(function () {
       server.listen(port, function () {
         console.log(`Listening on port: ${server.address().port}`);
         debug('Express server listening on port ' + server.address().port);

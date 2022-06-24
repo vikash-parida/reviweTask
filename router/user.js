@@ -1,24 +1,17 @@
 const express = require('express');
-const route = express.Router();
+const router = express.Router();
 const user = require('../api/controller/usercontroller')
-const errorHandel = require('../api/middelware/errorHandle')
+ const errorHandel = require('../api/middleware/errorHandle')
 
 
-route.post('/createUser',user.AddUser);
-route.get('/:id',errorHandel,user.updateUser);
-
-
-
-
-
-
+router.get('/',user.getUsers);
+router.post('/',user.AddUser);
+router.put('/:id',user.updateuser);
+router.get('/:id',user.getById);
+router.delete('/:id',user.deleteusers);
 
 
 
 
 
-
-
-
-
-module.exports = route;
+module.exports = router;

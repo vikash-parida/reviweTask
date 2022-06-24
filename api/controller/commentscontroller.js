@@ -1,4 +1,4 @@
-const models = require('../models');
+const models = require('../../models');
 
 exports.getcomments = async (req, res) =>{
     const comments = await models.comments.findAll({

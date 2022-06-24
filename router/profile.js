@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const profile =require('../api/controller/profilecontroller');
+const profile = require('../api/controller/profilecontroller');
 
 
 

@@ -1,5 +1,5 @@
 
-const models = require('../models');
+const models = require('../../models');
 
 exports.getTags = async (req, res, next) =>{
    try{const tag = await models.tag.findAll({

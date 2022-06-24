@@ -1,6 +1,6 @@
 const express = require('express');
 const routes = express.Router();
-const comments = require('../controller/comments');
+const comments = require('../api/controller/commentscontroller');
 
 
 routes.get('/', comments.getcomments);
