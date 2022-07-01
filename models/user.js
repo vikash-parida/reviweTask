@@ -22,6 +22,12 @@ module.exports = (sequelize,datatype) => {
     gender:{
         type: datatype.STRING,
     }
-    })
+     },{ freezeTableName: true,})
+
+   user.associate = function(models){
+     user.hasOne(models.profile, {
+        foreignKey: 'user_id' });
+     }
+
     return user;
 }

@@ -9,7 +9,7 @@ router.post('/',user.AddUser);
 router.put('/:id',user.updateuser);
 router.get('/:id',user.getById);
 router.delete('/:id',user.deleteusers);
-
+router.get('/rel',user.oneToOne);
 
 
 

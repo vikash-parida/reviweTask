@@ -4,8 +4,8 @@ module.exports = (sequelize,Datatype) => {
             type: Datatype.STRING,
             allowNull:false
         }
-    }    
-    );
+    },
+    { freezeTableName: true});
 
 return comments;
 }

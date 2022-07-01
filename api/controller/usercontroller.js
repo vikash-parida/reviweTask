@@ -23,7 +23,7 @@ exports.AddUser = async(req,res)=>{
 
 exports.getUsers = async (req, res) =>{
     const users = await models.user.findAll({
-        attributes:['name','contact']
+        attributes:['name','email','password','contact','gender']
 
     });
 
@@ -85,4 +85,9 @@ exports.deleteusers = async  (req, res)=>{
 }catch(err){
     console.log(err);
 }
+}
+
+exports.oneToOne = async (req, res)=>{
+const result = await models.user.findAll({})
+res.status(200).status(result);
 }
