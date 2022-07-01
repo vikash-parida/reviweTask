@@ -6,6 +6,6 @@ module.exports=(sequelize,DataTypes)=>{
                 this.setDataValue("tags",value);
             }
         }
-    });
+    },{ freezeTableName: true});
     return tag;
 }
