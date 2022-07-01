@@ -88,6 +88,6 @@ exports.deleteusers = async  (req, res)=>{
 }
 
 exports.oneToOne = async (req, res)=>{
-const result = await models.user.findAll({})
+const result = await models.user.findAll({attribute:['name','email','password','contact','gender']})
 res.status(200).status(result);
 }
